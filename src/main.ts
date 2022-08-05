@@ -1,19 +1,10 @@
-'use strict';
-
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module.js';
-import { NestExpressApplication } from '@nestjs/platform-express';
-import express from 'express';
-import {init} from './data.js';
+import { AppModule } from './app.module';
 
-async function main(port){
+async function main(port) {
     const api = await NestFactory.create(AppModule);
 
-    api.setViewEngine('hbs');
-//    await app.listen(3000);
-    
-//    const api = express();
-
+    /*
     api.get('/', (req, res) => {
         res.send(`\
         <div>\
@@ -36,6 +27,7 @@ async function main(port){
     api.get('/story/:storyId', (req, res) => {
         res.send('Hello World!')
     });
+    */
 
     api.listen(8080, () => console.log(`Server started on ${port}`));
 }
