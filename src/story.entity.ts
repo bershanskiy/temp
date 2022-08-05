@@ -11,6 +11,13 @@ export class Story {
   @Column()
   title: string;
 
+  // UNIX date
+  @Column()
+  date: number;
+
+  @Column()
+  text: string;
+
   @Column()
   fullDescription: string;
 

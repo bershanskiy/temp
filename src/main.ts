@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 
 async function main(port) {
-    const api = await NestFactory.create(AppModule);
+    const api = await NestFactory.create<NestExpressApplication>(AppModule);
 
     /*
     api.get('/', (req, res) => {

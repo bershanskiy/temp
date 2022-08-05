@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Category } from './category.entity';
 
 @Module({
   imports: [
@@ -12,7 +11,7 @@ import { Category } from './category.entity';
       port: 9000,
       username: 'root',
       password: 'root',
-      database: 'test-task',
+      database: 'testtask',
       entities: [],
       synchronize: true,
     }),
